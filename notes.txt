@@ -1,4 +1,5 @@
 ## dwm config ##
 dwm on ubuntu ref: https://varunbpatil.github.io/2013/09/28/dwm.html#UPDATE17OCT2013
 
-slstatus config includes bat,vol,cpu,ram,temp,date
+slstatus config: bat,vol,cpu,ram,temp,date
+dwm config: brightness and volume keybindings 
