@@ -3,3 +3,5 @@ dwm on ubuntu ref: https://varunbpatil.github.io/2013/09/28/dwm.html#UPDATE17OCT
 
 slstatus config: bat,vol,cpu,ram,temp,date
 dwm config: brightness and volume keybindings 
+
+Window manager that is easy to use and configure: i3wm with rofi & i3blocks
