@@ -1,5 +1,5 @@
 set $mod Mod1
-font pango:monospace 10
+font pango:monospace 9
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xrdb -merge $HOME/.Xresources
@@ -15,8 +15,9 @@ floating_modifier $mod
 bindsym Mod4+Shift+l exec "i3lock -c 000000"
 bindsym $mod+b exec firefox
 bindsym $mod+c exec google-chrome --password-store=gnome-libsecret
+bindsym $mod+y exec chromium --password-store=gnome-libsecret
+bindsym $mod+t exec qutebrowser
 bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+g exec emacsclient -a "" -c
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e bash -ic "{cmd} && read"'
 bindsym $mod+h focus left
@@ -72,10 +73,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -89,9 +90,7 @@ bar {
 
 default_border pixel 1
 
-for_window [class="Nautilus"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="TelegramDesktop"] floating enable
 for_window [class="Blueman-manager"] floating enable
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
