@@ -1,0 +1,35 @@
+# .muttrc
+# ================  IMAP ====================
+set imap_user = 'manmshuk@gmail.com'
+set imap_pass = 'djtzazhjwhnagely'
+set spoolfile = imaps://imap.gmail.com/INBOX
+set folder = imaps://imap.gmail.com/
+set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+
+# ================  SMTP  ====================
+set smtp_url = "smtps://manmshuk@smtp.gmail.com"
+set smtp_pass = 'djtzazhjwhnagely'
+set ssl_force_tls = yes # Require encrypted connection
+
+# ================  Composition  ====================
+set editor = "vim"
+set edit_headers = yes  # See the headers when editing
+set charset = UTF-8     # value of $LANG; also fallback for send_charset
+# Sender, email address, and sign-off line must match
+unset use_domain        # because joe@localhost is just embarrassing
+set realname = "Manmohan Shukla"
+set from = "manmshuk@gmail.com"
+set use_from = yes
+
+# Web keyboard shortcut macros
+bind editor <space> noop
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+set sort_aux = last-date-received                           
+set sort = reverse-threads
