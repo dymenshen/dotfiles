@@ -1,0 +1,34 @@
+partitioning
+formatting the partitions
+mounting the partitions
+genfstab command
+installing the base system plus these packages:
+efibootmgr vim networkmanager iwd grub sudo 
+
+Install the desktop
+
+pacman -S --needed xorg reflector
+xfce4-goodies xfce4 lightdm-gtk-greeter lightdm thunar-archive-plugin 
+thunar-media-tags-plugin xfce4-battery-plugin xfce4-datetime-plugin 
+xfce4-mount-plugin xfce4-netload-plugin xfce4-notifyd xfce4-pulseaudio-plugin 
+xfce4-screensaver xfce4-taskmanager network-manager-applet leafpad epdfview galculator 
+lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xdg-user-dirs-gtk
+
+systemctl enable lightdm
+
+chrooting into the installed system
+
+bootloader installation
+grub-install 
+grub-mkconfig 
+set the root password
+adding a non-root user
+edit the sudoers file
+configure reflector
+set the timezone
+setup locale
+configure network and hostname
+
+exit
+reboot
+remove the installation iso

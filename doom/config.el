@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Fira Code" :size 11 :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 12))
+(setq doom-font (font-spec :family "Fira Code" :size 13 :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 14))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -77,3 +77,14 @@
 (setq-default tab-width 8)
 (add-hook 'text-mode-hook #'auto-fill-mode)
 (setq-default fill-column 80)
+
+(setq projectile-project-search-path '("~/Documents/repos/"))
+(add-hook 'rust-mode-hook 'lsp-deferred)
+
+(setq lsp-clients-clangd-args '("-j=3"
+				"--background-index"
+				"--clang-tidy"
+				"--completion-style=detailed"
+				"--header-insertion=never"
+				"--header-insertion-decorators=0"))
+(after! lsp-clangd (set-lsp-priority! 'clangd 1))
