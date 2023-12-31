@@ -29,6 +29,15 @@ set the timezone
 setup locale
 configure network and hostname
 
+graphics drivers:
+pacman -S xf86-video-intel
+
+microcode:
+pacman -S intel-ucode
+
 exit
 reboot
 remove the installation iso
+
+improve font rendering using manjaro's article:
+https://wiki.manjaro.org/index.php/Improve_Font_Rendering
