@@ -52,3 +52,4 @@ note:
 -- enable window tiling 
 xfconf-query -c xfwm4 -p /general/tile_on_move -s true
 (it's not enabled by default)
+-- configure reflector
