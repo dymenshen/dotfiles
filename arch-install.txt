@@ -3,7 +3,7 @@ formatting the partitions
 mounting the partitions
 genfstab command
 installing the base system plus these packages:
-efibootmgr vim networkmanager iwd grub sudo 
+efibootmgr gvim networkmanager iwd grub sudo 
 
 Install the desktop
 
@@ -29,9 +29,6 @@ set the timezone
 setup locale
 configure network and hostname
 
-graphics drivers:
-pacman -S xf86-video-intel
-
 microcode:
 pacman -S intel-ucode
 
@@ -41,3 +38,17 @@ remove the installation iso
 
 improve font rendering using manjaro's article:
 https://wiki.manjaro.org/index.php/Improve_Font_Rendering
+
+install intel-media-driver
+install vulkan-intel for vulkan support
+
+some xfce tweaks:
+
+window manager theme: Totem
+
+note: 
+-- don't mess with the default compositor of xfce
+(it will cause screen tearing and mouse jitter)
+-- enable window tiling 
+xfconf-query -c xfwm4 -p /general/tile_on_move -s true
+(it's not enabled by default)
