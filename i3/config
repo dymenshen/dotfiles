@@ -1,5 +1,5 @@
 set $mod Mod1
-font pango:monospace 9
+font pango:monospace 10
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xrdb -merge $HOME/.Xresources
@@ -19,7 +19,7 @@ bindsym $mod+y exec chromium --password-store=gnome-libsecret
 bindsym $mod+t exec qutebrowser
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e bash -ic "{cmd} && read"'
+bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -83,11 +83,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	position bottom
-}
-
 default_border pixel 1
 
 for_window [class="Pavucontrol"] floating enable
@@ -117,3 +112,9 @@ mode "$mode_system" {
 }
 
 bindsym $mod+BackSpace mode "$mode_system"
+bar {
+
+        status_command SCRIPT_DIR=~/.config/i3blocks/i3blocks-contrib i3blocks 
+	position top
+	separator_symbol "<200b>"
+}
