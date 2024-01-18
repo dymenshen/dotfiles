@@ -1,5 +1,5 @@
 set $mod Mod1
-font pango:monospace 10
+font pango:monospace 8
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id xrdb -merge $HOME/.Xresources
@@ -7,7 +7,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 exec --no-startup-id nm-applet 
-exec --no-startup-id xrandr --output eDP-1 --off
+exec xrandr --output eDP-1 --off --output HDMI-1
 exec dbus-update-activation-environment --all
 
 floating_modifier $mod
@@ -116,5 +116,4 @@ bar {
 
         status_command SCRIPT_DIR=~/.config/i3blocks/i3blocks-contrib i3blocks 
 	position top
-	separator_symbol "<200b>"
 }
