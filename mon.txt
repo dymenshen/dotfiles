@@ -1,0 +1,7 @@
+qutebrowser default zoom size - 80%
+font size alacritty - 7
+terminal font - monospace
+font size i3 - 7
+
+font size doom emacs:
+(setq doom-font (font-spec :family "Monospace" :size 10 :weight 'normal))
