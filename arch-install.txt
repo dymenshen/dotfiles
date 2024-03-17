@@ -58,4 +58,4 @@ xfconf-query -c xfwm4 -p /general/tile_on_move -s true
 
 Arch in a VM:
 
-I used BIOS with GPT and the boot partition should be ext4 
+always do MBR/DOS with BIOS and EFI with GPT for simplicity
