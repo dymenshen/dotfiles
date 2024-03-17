@@ -55,3 +55,7 @@ note:
 xfconf-query -c xfwm4 -p /general/tile_on_move -s true
 (it's not enabled by default)
 -- configure reflector
+
+Arch in a VM:
+
+I used BIOS with GPT and the boot partition should be ext4 
