@@ -119,5 +119,5 @@ bindsym $mod+BackSpace mode "$mode_system"
 bar {
 
         status_command SCRIPT_DIR=~/.config/i3blocks/i3blocks-contrib i3blocks 
-	position top
+        position top
 }

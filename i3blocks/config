@@ -21,7 +21,7 @@ interval=10
 
 [battery]
 label=BAT 
-command=$SCRIPT_DIR/battery/battery
+command=$SCRIPT_DIR/battery-poly/battery-poly
 interval=10
 
 [time]

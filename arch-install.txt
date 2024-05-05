@@ -47,6 +47,7 @@ install vulkan-intel for vulkan support
 some xfce tweaks:
 
 window manager theme: Totem
+default light theme: adwaita
 
 note: 
 -- don't mess with the default compositor of xfce
@@ -59,3 +60,20 @@ xfconf-query -c xfwm4 -p /general/tile_on_move -s true
 Arch in a VM:
 
 always do MBR/DOS with BIOS and EFI with GPT for simplicity
+
+genfstab /mnt >> /mnt/etc/fstab; arch-chroot /mnt bash -c 'pacman -Sy grub;
+grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB;
+reboot
+
+vi mode for readline(3) can be enabled by adding to /etc/inputrc: 
+set editing-mode vi
+
+CPU frequency scaling: 
+
+Disable turbo boost
+Set the scaling governor to powersave
+Set intel performance and energy bias hint
+Enable hardware P-states
+
+Turn off DPMS
+Swap left ctrl to capslock using X config files
