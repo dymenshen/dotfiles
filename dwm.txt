@@ -1,0 +1,2 @@
+Setting up suckless tools on arch linux
+dwm+st+tmux+vim

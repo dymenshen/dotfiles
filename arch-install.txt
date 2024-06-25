@@ -12,11 +12,12 @@ xfce4-goodies xfce4 lightdm-gtk-greeter lightdm thunar-archive-plugin
 thunar-media-tags-plugin xfce4-battery-plugin xfce4-datetime-plugin 
 xfce4-mount-plugin xfce4-netload-plugin xfce4-notifyd xfce4-pulseaudio-plugin 
 xfce4-screensaver xfce4-taskmanager network-manager-applet leafpad epdfview galculator 
-lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xdg-user-dirs-gtk
+lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xdg-user-dirs-gtk gst-libav
 
 systemctl enable lightdm
 
 pacman -S acpi acpid i3 i3blocks
+yay -S matcha-gtk-theme kali-themes
 
 chrooting into the installed system
 
@@ -77,3 +78,5 @@ Enable hardware P-states
 
 Turn off DPMS
 Swap left ctrl to capslock using X config files
+
+wallpaper: official arch linux wallpapers: sunset.jpg
