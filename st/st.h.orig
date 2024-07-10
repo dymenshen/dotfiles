@@ -78,7 +78,6 @@ typedef union {
 } Arg;
 
 void die(const char *, ...);
-void fullscreen(const Arg *);
 void redraw(void);
 void draw(void);
 
