@@ -1,0 +1,15 @@
+man pages navigation: 
+
+If you are reading a very long page, and you need to switch back and forth between a few 
+sections, use marks. Let us say, I am at a certain position of the man page. To mark the
+position, I press m and followed by some key, say 1. Now, the position is saved at mark 1. 
+If I scroll somewhere else and I need to revisit this position, I simple press a followed 
+by 1.
+
+vim+bash+tmux
+
+st+dwm+dmenu
+
+clion+vscode+ghidra
+
+mutt+newsboat+irssi
