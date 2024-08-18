@@ -16,8 +16,8 @@ lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xdg-user-dirs-gtk gst-l
 
 systemctl enable lightdm
 
-pacman -S acpi acpid i3 i3blocks
-yay -S matcha-gtk-theme kali-themes
+pacman -S acpi acpid i3 i3blocks papirus-icon-theme
+yay -S matcha-gtk-theme 
 
 chrooting into the installed system
 
