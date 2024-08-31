@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code:pixelsize=11:antialias=true:autohint=true";
+static char *font = "Fira Code Retina:pixelsize=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,32 +96,30 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#3b4252", /* black   */
+	"#f01a41", /* red     */
+	"#68ab2e", /* green   */
+	"#de9604", /* yellow  */
+	"#5287e3", /* blue    */
+	"#d404ad", /* magenta */
+	"#0a8b91", /* cyan    */
+	"#2f3030", /* grey    */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#4c566a", /* black   */
+	"#ed7e77", /* red     */
+	"#66d604", /* green   */
+	"#fabc41", /* yellow  */
+	"#59a2de", /* blue    */
+	"#f50aca", /* magenta */
+	"#278a87", /* cyan    */
+	"#161717", /* dark grey */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	"#404142", /* default foreground colour */
+	"#c9d7f5", /* default background colour */
 };
 
 
@@ -129,8 +127,8 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
 unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
