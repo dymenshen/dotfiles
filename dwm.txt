@@ -3,3 +3,4 @@ dwm+st+tmux+vim
 slstatus
 
 standalone window managers are fucking great. 
+yeah that's right!
